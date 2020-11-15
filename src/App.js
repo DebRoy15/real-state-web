@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import MainPage from './components/MainPage';
+import ContentArea from './components/ContentArea';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <div className="App">
 
         <Header />
-        <MainPage />
+        <ContentArea />
 
       </div>
     </Router>
