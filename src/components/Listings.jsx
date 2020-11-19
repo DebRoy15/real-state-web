@@ -5,7 +5,10 @@ export default class Listings extends Component {
         return (
             <div id="listing">
                 <section className="search-area">
-                    <input type="text" name="search" />
+                    <input type="text" name="search" autoComplete="off" />
+                    <label htmlFor="search" className="search-label">
+                        <span className="content-search">Search</span>
+                    </label>
                 </section>
                 <section className="sortby-area">
                     <div className="results">390 results found</div>
@@ -29,43 +32,57 @@ export default class Listings extends Component {
                 </section>
 
                 <section className="listing-results">
-                    <div className="product-list">
-                        <div className="product-img">
+                    <div className="col-md-3">
+                        <div className="product-list">
+                            <div className="product-img">
 
-                            <span className="product-address">Address</span>
-                            <div className="product-details">
-                                <div className="user-image"></div>
-                                <div className="user-details">
-                                    <span className="user-name">Nina Smith</span>
-                                    <span className="post-date">05/05/2020</span>
-                                </div>
-                                <div className="listing-details">
-                                    <div className="floor-space">
-                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-app" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M11 2H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z" />
-                                        </svg>
-                                        <span> 1000 ft&sup2;</span>
+                                <span className="product-address">24 Dexi Hills</span>
+                                <div className="product-details">
+                                    <div className="col-md-3">
+                                        <div className="user-image"></div>
                                     </div>
-                                    <div className="bedrooms">
-                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-align-end" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M14.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5z" />
-                                            <path d="M13 7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7z" />
-                                        </svg>
-                                        <span>3 bedrooms</span>
+                                    <div className="col-md-9">
+                                        <div className="user-details">
+                                            <span className="user-name">Nina Smith</span>
+                                            <span className="post-date">05/05/2020</span>
+                                        </div>
+                                        <div className="listing-details">
+                                            <div className="floor-space">
+                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-app" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M11 2H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z" />
+                                                </svg>
+                                                <span> 1000 ft&sup2;</span>
+                                            </div>
+                                            <div className="bedrooms">
+                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-align-end" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M14.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5z" />
+                                                    <path d="M13 7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7z" />
+                                                </svg>
+                                                <span>3 bedrooms</span>
+                                            </div>
+                                        </div>
+                                        <div className="view-btn">
+                                            View Listing
                                     </div>
+                                    </div>
+
                                 </div>
                             </div>
-                        </div>
-                        <div className="bottom-info">
-                            <span>$ 1000 / month</span>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M12.166 8.94C12.696 7.867 13 6.862 13 6A5 5 0 0 0 3 6c0 .862.305 1.867.834 2.94.524 1.062 1.234 2.12 1.96 3.07A31.481 31.481 0 0 0 8 14.58l.208-.22a31.493 31.493 0 0 0 1.998-2.35c.726-.95 1.436-2.008 1.96-3.07zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-                                <path fill-rule="evenodd" d="M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                            </svg>
-                            <span>Ridgewood new york</span>
+                            <div className="bottom-info">
+                                <span className="price">$ 1000 / month</span>
+
+                                <span className="location">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M12.166 8.94C12.696 7.867 13 6.862 13 6A5 5 0 0 0 3 6c0 .862.305 1.867.834 2.94.524 1.062 1.234 2.12 1.96 3.07A31.481 31.481 0 0 0 8 14.58l.208-.22a31.493 31.493 0 0 0 1.998-2.35c.726-.95 1.436-2.008 1.96-3.07zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                        <path fill-rule="evenodd" d="M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                    </svg>
+                                    Ridgewood new york
+                            </span>
+                            </div>
                         </div>
                     </div>
                 </section>
+
 
                 <section className="pagination">
                     <ul className="pagination-num">
